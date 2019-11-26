@@ -9,7 +9,7 @@ os.system('clear')
 
 mylist = [1, 2, 3]
 
-while(True):
+def menu():
     print('1 - Print list')
     print('2 - Append to the list')
     print('3 - Print the size of the list')
@@ -17,6 +17,11 @@ while(True):
     
     option = int(input('Enter your choice: '))
     print('\n')
+    return option
+
+    
+while(True):
+    option = menu()
 
     #Print the list
     if option == 1:
@@ -28,7 +33,7 @@ while(True):
         if item.isnumeric() == False:
             mylist.append(item)
         elif item.isnumeric() == True:
-            mylist.append(int(item))
+             mylist.append(int(item))
 
     #Print the number of items in the list
     if option == 3:
