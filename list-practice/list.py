@@ -4,31 +4,44 @@
 #Have a menu add, remove number of items
 #Print the list after each operation
 
+import pdb
 import os
 os.system('clear')
 
-mylist = [1, 2, 3]
+mylist = []
 
 def menu():
+    print('\n')
     print('1 - Print list')
-    print('2 - Append to the list')
-    print('3 - Print the size of the list')
+    print('2 - Insert at position')
+    print('3 - Append to the list')
+    print('4 - Print the size of the list')
     print('0 - Exit')
     
     option = int(input('Enter your choice: '))
     print('\n')
     return option
-
     
 while(True):
     option = menu()
 
     #Print the list
     if option == 1:
-        print(mylist)
-    
-    #Append new item to the end of the list
+        if len(mylist) == 0:
+            print('The list is empty.')
+        else:
+            print(mylist)
+
+    #Insert at position
     if option == 2:
+        insertat = int(input('Enter position to insert from 0 to {} : '.format(len(mylist)))
+        item = input('Enter a new list item to insert at the given position: ')
+
+        #Add numeric check
+        mylist.insert(insertat, item)
+
+    #Append new item to the end of the list
+    if option == 3:
         item = input('Enter a new list item: ')
         if item.isnumeric() == False:
             mylist.append(item)
@@ -36,7 +49,7 @@ while(True):
              mylist.append(int(item))
 
     #Print the number of items in the list
-    if option == 3:
+    if option == 4:
         print('The number of items in the list is: ', len(mylist))
 
     #Exit
