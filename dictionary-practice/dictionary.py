@@ -45,3 +45,6 @@ while(True):
     if option == 4:
         size = len(dictionary)
         print('The size of the dictionary is', size)
+
+    if option == 0:
+        break
