@@ -28,11 +28,21 @@ def menu():
 def plist():
     print(mylist)
 
-#def ins():
+def ins():
+    insertat = int(input('Enter position to insert from 0 to {} : ' .format(len(mylist))))
+    item = input('Enter a new list item to insert at the given position: ')
 
-#def app():
+    mylist.insert(insertat,item)
 
-#def size():
+def app():
+    item = input('Enter a new list item: ')
+    if item.isnumeric() == False:
+        mylist.append(item)
+    elif item.isnumeric() == True:
+        mylist.append(int(item))
+
+def size():
+    print('The size of the list is',len(mylist))
 
 def exit():
     sys.exit()
@@ -42,6 +52,9 @@ def switch(choice):
     choices = {
     0: exit,
     1: plist,
+    2: ins,
+    3: app,
+    4: size,
     }
     # Get the function from switcher dictionary
     func = choices.get(choice, lambda: "Invalid month")
