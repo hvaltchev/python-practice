@@ -31,7 +31,6 @@ def plist():
 def ins():
     insertat = int(input('Enter position to insert from 0 to {} : ' .format(len(mylist))))
     item = input('Enter a new list item to insert at the given position: ')
-
     mylist.insert(insertat,item)
 
 def app():
