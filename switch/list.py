@@ -55,7 +55,8 @@ def app():
         mylist.append(int(item))
 
 def extend():
-    return 0
+    x = list(map(int, input("Enter a multiple values to extend the list with: ").split())) 
+    mylist.extend(x)
 
 def ins():
     insertat = int(input('Enter position to insert from 0 to {} : ' .format(len(mylist))))
@@ -63,28 +64,32 @@ def ins():
     mylist.insert(insertat,item)
 
 def remove():
-    return 0
+    item = int(input('Enter a value to remove from the list: '))
+    mylist.remove(item)
+
 
 def pop():
     mylist.pop()
 
 def clear():
-    return 0
+    mylist.clear()
 
 def index():
-    return 0
+    item = int(input('Enter an index from 0 to {} : ' .format(len(mylist))))
+    print('The item at the inedex is : ', mylist.index(item))
 
 def size():
     print('The size of the list is',len(mylist))
 
 def sort():
-    return 0
+    mylist.sort()
 
 def reverse():
-    return 0
+    mylist.reverse()
 
 def copy():
-    return 0
+    copy = mylist.copy()
+    print(copy)
 
 def exit():
     sys.exit()
