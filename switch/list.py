@@ -1,21 +1,5 @@
 #!/usr/bin/env python3
 
-#Create a list
-#Have a menu add, remove number of items
-#Print the list after each operation
-#TODO 
-#append  [x]
-#extend  [ ]  
-#insert  [x] 
-#remove  [ ] 
-#pop     [ ] 
-#clear   [ ] 
-#index   [ ] 
-#count   [x] 
-#sort    [ ] 
-#reverse [] 
-#copy    []
-
 import pdb
 import os
 import sys
